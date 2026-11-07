@@ -6,19 +6,19 @@ Free to download and use under **LICENSE.txt**; the source code remains private.
 See **ABOUT.txt** and the separate third-party notices supplied with the package.
 
 This folder includes the compiled recorder, local panel and capture-only
-installation payload. Python, Node, Fukukitaru and Hachimi are not required.
+installation payload. No development tools or separate capture application are required.
 Keep the whole folder together. This test build has not yet passed a live-game
 or clean-PC acceptance test; do not treat it as a public production release.
 
 ## Start here
 
 1. Extract the complete ZIP to a writable folder outside the game directory.
-2. Close Fukukitaru and leave the Rulership bot stopped. They use the same
-   capture receiver port. CM Recorder never closes them automatically.
+2. Close any other race-data recording app using the capture connection.
+   CM Recorder never closes another application automatically.
 3. Open **Start CM Recorder.cmd** or **CMRecorder.exe**.
 4. Open **Capture settings → Global capture setup**:
-   - **Verified existing Rulership capture** means no installation is needed.
-     Your loader, input, acceleration and other files remain unchanged.
+   - **Verified existing compatible capture** means no installation is needed.
+     Existing compatible capture files and unrelated files remain unchanged.
    - If capture is missing, close Global and click **Install capture**. Only
      the included capture profile is installed. Foreign DLLs are never replaced.
    - If folder access is denied, close the recorder and Global, right-click
@@ -32,7 +32,7 @@ or clean-PC acceptance test; do not treat it as a public production release.
 8. Play a Room Match or CM race you already intended to play. No career is needed.
    Check the new row, your finishing positions, course and runner count.
 9. Open **Export recordings → Download ZIP**, with raw replay data enabled, to inspect/export the
-   same structured records and replay data as Rulership's recorder.
+   available structured race records and replay data.
 
 The panel address is **http://127.0.0.1:8078/**. If the browser did not open,
 enter that address manually. The first recording is off by default.
@@ -59,10 +59,10 @@ When updating from 0.2.0, close the old recorder normally and start this complet
 portable folder. The same data folder is reused. This UI update does not require
 a game DLL replacement or a game restart.
 
-## Your existing Rulership installation
+## Existing compatible capture installation
 
 A recognized installation is reused read-only. **Remove CM Recorder Capture**
-will not delete it. No existing Rulership configuration or recordings are
+will not delete it. Existing configuration and recordings are never
 imported, overwritten or deleted. The capture-only payload for a fresh game
 does not include the input bridge or animation/skip modules.
 
@@ -99,3 +99,19 @@ Self-test with synthetic data and no game connection: `CMRecorder.exe --self-tes
 When reporting a problem, include the setup/receiver messages, whether the
 race was Room Match/CM group/final, and whether the record row appeared.
 Exports can include rival names if enabled; inspect them before sharing.
+
+## Understand capture and protect your data
+
+A capture component runs inside the game process; the recorder and dashboard run
+on your PC. This is not a screen/video recorder. It does not request your Steam
+password or automatically upload recordings. Rival names are optional and exports
+can still identify people through context. Files are readable local JSON/gzip/ZIP,
+not application-encrypted storage.
+
+Only elevate the install/remove command if game-folder permissions require it.
+Do not expose the local panel on a public network or disable security protections
+for setup. The current executable is not code-signed. Compare the official checksum
+and investigate any security alert rather than automatically bypassing it.
+
+See [how it works](HOW_IT_WORKS.md), [privacy](PRIVACY.md) and
+[security and permissions](SECURITY.md).

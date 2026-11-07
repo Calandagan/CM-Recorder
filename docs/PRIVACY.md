@@ -1,41 +1,69 @@
 # Privacy and local data
 
-CM Recorder observes the supported Steam Global game process and stores recordings
-locally. It has no automatic recording upload, cloud account or telemetry submission
-feature. Opening the Mihono Studios/GitHub links uses your browser normally.
+## What is recorded
 
-## Storage
+For supported races, CM Recorder saves the available course, results, runner
+attributes, skills, recorded activation events and decoded replay samples. It
+also saves local settings and session information such as timestamps, software
+versions and integrity/provenance hashes. This is structured data, not a desktop
+video, microphone recording, keyboard logger or recording of unrelated applications.
 
-The default root is `%LOCALAPPDATA%\CMRecorder\steam-global`:
+The capture module reads relevant game responses inside the supported Steam
+Global process. It does not operate as a machine-wide traffic proxy. You do not
+enter your Steam password into CM Recorder. Technical data needed to decode a
+session is handled locally; it is not an account sign-in feature.
 
-- `race-records`: structured races, events and available raw replay records.
-- `sessions`: per-session capture/provenance information.
-- Product settings, sequence reservation and instance locking files also live here.
+## Names and identifiers
 
-Installation ownership receipts are under `%LOCALAPPDATA%\CMRecorder\installations`.
-Uninstalling owned game capture files preserves recordings. Automatic retention,
-cloud backup and an import/migration feature are not supplied by this release.
-Close the recorder normally before making a full local backup.
+Recording starts off. Keeping rival trainer names is an optional setting and is
+off by default. Where privacy filtering can identify your trainer name, it removes
+it; observed account identifiers are replaced with stable local pseudonyms.
+If rival names are enabled, rival trainer/club names can appear in saved summaries
+and exports. Stable pseudonyms can still link several races to the same runner/trainer.
 
-## Names and sharing
+**An export is not guaranteed anonymous.** Race times, results, runner builds,
+context and user-entered or previously retained names may identify people in
+combination. Inspect every export before sharing it. A changed name setting does
+not retroactively remove information from old recordings, exports or backups.
 
-Recording starts off. Retaining rival names is opt-in. Even without plain rival
-names, race results, pseudonyms, runner details, timestamps and contextual metadata
-can be sensitive or identifying in combination. Exports are not guaranteed anonymous.
-Changing a setting does not retroactively clean previously recorded or exported files.
+## Where data goes
 
-Inspect exports before posting them. Never publish the full local data directory,
-installation receipts, privacy salt, session/control files or account credentials.
-Only share individual recordings when you are comfortable with their contents and
-have the necessary permission. An export is data, not a video.
+Recordings are stored on your PC. The application has no automatic recording
+upload, hosted account or analytics-submission feature. Viewing local portraits
+and icons does not require contacting an image server. Choosing **Download ZIP**
+downloads data from your local recorder to your browser; you decide whether to
+share it. Official website and GitHub links open external sites only when followed,
+and those sites have their own privacy policies.
 
-## Local connections
+Default locations:
 
-The panel listens on loopback (`127.0.0.1:8078` by default), with a per-session token
-and same-origin checks. The receiver is process-local/loopback, not a machine-wide
-traffic proxy. No Windows CA installation is required. Another process using the
-same Windows account is outside the protection of this browser-session token.
-Do not expose these local ports through a public proxy or router forwarding.
+| Data | Windows location |
+| --- | --- |
+| Race records and available raw replays | `%LOCALAPPDATA%\CMRecorder\steam-global\race-records` |
+| Session/provenance files | `%LOCALAPPDATA%\CMRecorder\steam-global\sessions` |
+| App settings and local state | `%LOCALAPPDATA%\CMRecorder\steam-global` |
+| Capture installation ownership receipts | `%LOCALAPPDATA%\CMRecorder\installations` |
 
-CM Recorder never intentionally kills another capture service or takes over its
-occupied port. Close Fukukitaru before connecting the recorder's capture receiver.
+## Local protection and retention
+
+**Recordings and exported ZIPs are not encrypted at rest by this application.**
+JSON and gzip/ZIP compression are readable storage formats, not password protection.
+Anyone with sufficient access to your Windows account, backup or shared files may
+read them. Use your normal device/account protection and manage file sharing carefully.
+
+There is no automatic retention/deletion schedule or cloud backup in this release.
+Close the recorder normally before backing up or managing its data. Keep backups
+private. Removing game capture files does not delete recordings. Do not delete
+ownership receipts to uninstall capture; use the supplied removal control instead.
+Do not edit individual state files while the recorder is running.
+
+## Support and your choices
+
+You can leave recording off, select the supported modes, leave rival names off,
+view existing recordings offline and choose whether to export/share data.
+Never attach a full data directory, private salt, session/control files,
+installation receipts, credentials or unreviewed exports to a public issue.
+
+Read [security and permissions](SECURITY.md) for the local-access threat model.
+The software license does not give the publisher ownership of your recordings;
+sharing game content or another person's information still requires the relevant rights.

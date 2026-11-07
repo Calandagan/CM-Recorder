@@ -26,13 +26,16 @@ Artwork, portraits and skill icons are not bundled inside recording exports.
 
 | Layer | Schema/client |
 | --- | --- |
-| Export manifest | `rulership-race-export-v1` |
-| Race record | `rulership-race-v1` |
-| Event record | `rulership-race-events-v1` |
-| Raw record | `rulership-race-raw-v1` |
+| Export manifest | Versioned export schema in `export.json` |
+| Race record | Versioned race schema in each JSONL object |
+| Event record | Versioned event schema in each JSONL object |
+| Raw record | Versioned raw schema in the decompressed JSON |
 | Application client | `steam-global` |
 | Record/raw outer client | `steam` |
 | Decoded replay client | `global` |
+
+Read the exact schema identifier and version from the exported file; do not
+rename them or infer them from the application name.
 
 Respect `race_key` and `revision`; do not join runners or revisions by display name.
 The export selects one race revision and regenerates its events. Raw is included

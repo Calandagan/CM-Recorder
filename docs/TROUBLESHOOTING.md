@@ -9,7 +9,7 @@ The development preview port 18078 is not the portable's default address.
 
 ## Port busy or no capture connection
 
-Close Fukukitaru and keep the Rulership bot stopped. Select **Reconnect capture**.
+Close other race-data recording apps using the capture connection. Select **Reconnect capture**.
 Do not delete another service's configuration or installation receipt. The app will
 not terminate other services. **Open Offline.cmd** does not connect to the game.
 
@@ -18,7 +18,7 @@ not terminate other services. **Open Offline.cmd** does not connect to the game.
 Check **Capture settings → Global capture setup**. Close Global before installing
 the supplied capture profile. If game-folder permissions require elevation, run
 **Install Capture.cmd** as administrator, then run the recorder normally.
-Do not replace foreign DLLs manually. A recognized Rulership capture is reused
+Do not replace foreign DLLs manually. An approved compatible capture installation is reused
 without replacing its loader, input bridge or acceleration modules.
 
 ## Global folder is not detected

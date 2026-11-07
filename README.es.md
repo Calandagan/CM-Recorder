@@ -9,11 +9,11 @@ Champions Meeting y Practice. El código fuente se mantiene privado.
 
 **Versión 0.3.0 preliminar para Windows x64.** [Descargar ZIP completo](https://github.com/Calandagan/CM-Recorder/releases/download/v0.3.0-beta.1/CMRecorder-0.3.0-Global-Test-20261107-173013-092.zip).
 
-1. Extrae toda la carpeta fuera del directorio del juego. No necesitas Python, Node ni Hachimi.
-2. Cierra Fukukitaru y deja el bot de Rulership detenido: comparten el receptor de captura.
+1. Extrae toda la carpeta fuera del directorio del juego. No necesitas herramientas de desarrollo ni otra aplicación de captura.
+2. Cierra otras aplicaciones de grabación de carreras que puedan ocupar la conexión de captura.
 3. Abre **Start CM Recorder.cmd** o **CMRecorder.exe**.
-4. Revisa **Capture settings → Global capture setup**. Si reconoce la captura de
-   Rulership, la reutiliza sin modificarla. Si falta, cierra Global y usa **Install capture**.
+4. Revisa **Capture settings → Global capture setup**. Si reconoce una captura
+   compatible y verificada, la reutiliza sin modificarla. Si falta, cierra Global y usa **Install capture**.
 5. Activa **Record races**, abre Global desde Steam y espera **Global capture connected**.
 6. Después de la carrera, usa **Inspect** o **Export recordings → Download ZIP**.
 
@@ -40,8 +40,17 @@ se señalan y las observaciones desconocidas se excluyen del porcentaje.
 
 ## Datos, licencia y ayuda
 
-Las grabaciones se guardan en tu PC, sin subida automática. Conservar nombres rivales
+Un componente de captura se carga dentro del juego y entrega los datos de carrera
+a un grabador local. El navegador muestra esos datos desde tu propio PC: no es una
+cuenta web ni una grabación de pantalla. Las grabaciones se guardan en tu PC,
+sin subida automática. Conservar nombres rivales
 es opcional; revisa cualquier export antes de compartirlo. JP y DMM no están soportados.
+Los archivos locales y ZIP exportados no están cifrados por la aplicación. El
+ejecutable actual no tiene firma digital. Los controles del panel local ayudan
+frente a peticiones de otras páginas, pero no protegen de malware que ya tenga
+acceso a tu cuenta de Windows. No hace falta abrir puertos del router ni desactivar
+el antivirus. Comprueba la descarga y revisa cualquier alerta antes de ejecutarla.
+
 La instalación nueva añade componentes propios de captura con el juego cerrado;
 no sustituye el ejecutable original. El programa no envía inputs ni acelera el juego.
 
@@ -54,7 +63,9 @@ Documentación técnica y guías en inglés:
 
 - [Instalación, actualización y desinstalación](docs/GETTING_STARTED.md)
 - [Solución de problemas](docs/TROUBLESHOOTING.md)
+- [Cómo funciona la herramienta](docs/HOW_IT_WORKS.md)
 - [Privacidad y datos locales](docs/PRIVACY.md)
+- [Ciberseguridad, permisos y límites](docs/SECURITY.md)
 - [Consistencia de habilidades](docs/SKILL_CONSISTENCY.md)
 - [Formato de exportaciones](docs/RECORDING_FORMAT.md)
 - [Novedades](CHANGELOG.md)

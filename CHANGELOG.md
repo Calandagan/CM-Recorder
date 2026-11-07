@@ -3,7 +3,7 @@
 ## 0.3.0 — preliminary Global release
 
 - Standalone Windows x64 recorder for Room Match, CM groups/finals and Practice.
-- Local capture setup/removal and read-only reuse of recognized Rulership capture.
+- Local capture setup/removal and read-only reuse of approved compatible capture.
 - Race inspector, course statistics, skill categories/icons and character portraits.
 - Mihono Studios neutral/coral visual design with dark and light themes.
 - Skill activation consistency: minimum sample, own/all runners, optional green

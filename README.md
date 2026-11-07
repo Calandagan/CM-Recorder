@@ -13,7 +13,7 @@ inspect recorded skill activations, and export race data for independent analysi
 **Current version: 0.3.0 — preliminary Windows x64 portable.**
 Download the complete ZIP from [Releases](https://github.com/Calandagan/CM-Recorder/releases), extract it to a writable
 folder outside the game directory, and keep the whole folder together.
-Python, Node, Fukukitaru and Hachimi are not required.
+No development tools or separate capture application are required.
 
 The current build passed automated tests and compiled offline checks. A clean-PC
 acceptance test and an end-to-end live-game acceptance test for this exact package
@@ -21,10 +21,10 @@ are not yet documented. This is a pre-release, not a production certification.
 
 ## Start recording
 
-1. Close Fukukitaru and leave the Rulership bot stopped; the capture receivers share a port.
+1. Close any other race-data recording app that may already be using the capture connection.
 2. Open **Start CM Recorder.cmd** (or **CMRecorder.exe**).
 3. In **Capture settings → Global capture setup**, inspect the installation status.
-   A verified existing Rulership capture is reused without changing it. If capture
+   An approved compatible capture installation is reused without changing it. If capture
    is missing, close Global and choose **Install capture**.
 4. Enable **Record races**, then open Global through Steam. Wait for
    **Global capture connected** before entering the supported race mode.
@@ -49,19 +49,26 @@ For viewing existing recordings without connecting to the game, open **Open Offl
 Not every missing activation has a provable cause. **No activation recorded** does
 not by itself mean a failed activation roll. See [skill-analysis limits](docs/SKILL_CONSISTENCY.md).
 
-## Scope and privacy
+## How it works, privacy and security
 
 **Steam Global only** (appid `3224770`); JP and DMM are not supported.
 This product records data; it does not send game inputs, run a bot or accelerate animations.
 Fresh capture setup installs product-owned capture components in the game folder
-with the game closed. It does not patch the original game executable or require Hachimi,
-a Windows-wide proxy or a trusted certificate.
+with the game closed. It does not patch the original game executable, configure
+a Windows-wide proxy or install a trusted certificate.
+
+A capture component runs inside the game process and sends relevant race data to
+the local recorder. The browser dashboard is served by your own PC; it is not an
+online account or screen-recording service.
 
 Recordings remain on your PC. The app does not automatically upload them.
-Rival names are opt-in; review exports before sharing. Local recording files are
-not included in this repository or in the official download.
+Rival names are opt-in; review exports before sharing.
+Local recordings and exports are not encrypted by the app. The current executable
+is not digitally signed. The local web API has session/origin checks, but these
+do not defend against malicious software running as your Windows user.
+Local recording files are not included in the official download.
 
-[Privacy and local data](docs/PRIVACY.md) · [Recording/export format](docs/RECORDING_FORMAT.md)
+[How it works](docs/HOW_IT_WORKS.md) · [Privacy and local data](docs/PRIVACY.md) · [Security and permissions](docs/SECURITY.md) · [Recording/export format](docs/RECORDING_FORMAT.md)
 
 ## License and credits
 
