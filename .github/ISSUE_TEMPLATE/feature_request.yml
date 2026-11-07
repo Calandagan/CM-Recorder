@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest an improvement to the recorder or its local panel.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired behavior and why it would help
+    validations:
+      required: true

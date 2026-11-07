@@ -1,0 +1,92 @@
+CM Recorder - Mihono Studios Community Use License
+Version 1.0 - 7 November 2026
+
+Copyright (c) 2026 Calandagan. All rights reserved in the original CM Recorder
+components. Developed and published by Mihono Studios for the Umamusume community.
+Official website: https://mihonostudios.com
+
+1. Scope
+
+These terms apply only to original CM Recorder components that the copyright
+holder is authorized to license. CM Recorder is proprietary software, available
+for use without charge. This is not an open-source license or a transfer of
+ownership. Separately licensed components are addressed in section 5.
+
+2. Permission to download and use
+
+Subject to these terms, you receive a non-exclusive, worldwide, royalty-free
+permission to download official releases, install and run them for lawful
+purposes, and keep reasonable backup copies. No source-code access, subscription
+or payment is required by this license. This permission covers personal and
+organizational use; it does not grant a right to sell the program.
+
+You may tell others about CM Recorder and link to its official download pages.
+
+3. Rights reserved
+
+Except with prior written permission from the copyright holder, as expressly
+permitted by a third-party license, or as permitted by applicable law, you may not:
+
+- Publish, redistribute, sell, rent, sublicense or offer modified copies of the
+  original CM Recorder components, including repackaged installers or binaries.
+- Copy or reuse those components' source code, or create derivative software
+  from them. Distribution does not grant a source-code license.
+- Reverse engineer, decompile or disassemble those components beyond what
+  applicable law permits. This does not override mandatory rights, including
+  applicable interoperability exceptions.
+- Remove copyright, licensing or third-party notices, misrepresent authorship,
+  or imply that an unofficial product is endorsed by Mihono Studios.
+
+Nothing here restricts rights that applicable law does not allow to be restricted.
+
+4. Recordings and interoperability
+
+This software license does not give Mihono Studios ownership of your recordings
+and does not apply its code-reuse restrictions to the recording files you export.
+You may use, inspect and export your recordings, and share them to the extent you
+hold the necessary rights and comply with applicable privacy and third-party
+requirements. Game content or other people's information does not become yours
+merely because it appears in a recording.
+
+Independent tools that read or visualize recordings are not prohibited merely
+because they support the recording format. This does not authorize copying
+proprietary CM Recorder code. No upload or account access is required by this
+license.
+
+5. Third-party software, artwork and trademarks
+
+Third-party components remain subject to their respective licenses and notices.
+Those terms take precedence for those components; this license does not remove
+rights or impose additional restrictions on material licensed separately.
+Consult THIRD-PARTY-NOTICES.txt, licenses/, dependency-notices.json and, when
+artwork is included, web/media/NOTICE.txt in the distributed package.
+
+Umamusume Pretty Derby, its characters, artwork and other game assets belong to
+Cygames and their respective rights holders. They are not licensed as original
+Mihono Studios software by this document. CM Recorder is an unofficial community
+tool and is not affiliated with or endorsed by Cygames.
+
+The Mihono Studios name and branding identify the developer and publisher. No
+trademark license for another product or endorsement is granted.
+
+6. Warranty and liability
+
+To the extent permitted by applicable law, the software is provided "as is" and
+"as available", without warranties of merchantability, fitness for a particular
+purpose or uninterrupted compatibility. The copyright holder and publisher are
+not liable for loss or damage resulting from use of the software to the extent
+such liability may lawfully be excluded. Mandatory consumer rights and liabilities
+that cannot lawfully be excluded remain unaffected.
+
+7. Breach and surviving rights
+
+Use outside the permission granted above is not authorized by this license.
+If a breach terminates your permission under applicable law, stop the unauthorized
+use. This does not transfer ownership of your recordings, remove statutory rights
+or terminate rights granted under separate third-party licenses.
+
+8. Additional permission
+
+Permissions beyond these terms require separate written authorization from the
+copyright holder or an authorized representative of Mihono Studios. For official
+project information, visit https://mihonostudios.com.

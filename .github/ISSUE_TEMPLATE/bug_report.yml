@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible problem with CM Recorder.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach private data folders, credentials, tokens or unreviewed recordings. Steam Global only."
+  - type: input
+    id: version
+    attributes:
+      label: Version and build
+      placeholder: "0.3.0 / build timestamp from the ZIP name"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Affected mode
+      options:
+        - Room Match
+        - Champions Meeting group
+        - Champions Meeting final
+        - Practice
+        - Offline viewing / export
+        - Setup / other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected behavior and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Capture setup / receiver messages and additional context
+      description: "Include whether the race row appeared. Remove private details before posting."

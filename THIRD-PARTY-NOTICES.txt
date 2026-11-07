@@ -1,0 +1,6 @@
+CM Recorder - developed by Mihono Studios for the Umamusume community.
+Official website: https://mihonostudios.com
+Original product terms: LICENSE.txt; attribution: ABOUT.txt.
+Third-party licenses are included in licenses/. They retain their own terms.
+Dependency versions and notice locations: dependency-notices.json.
+Artwork provenance and notices: web/media/NOTICE.txt.

@@ -1,0 +1,15 @@
+CM Recorder
+Developed by Mihono Studios for the Umamusume community.
+Official website: https://mihonostudios.com
+
+Free to download and use under LICENSE.txt. Proprietary source code.
+Copyright (c) 2026 Calandagan, published by Mihono Studios.
+
+An independent Steam Global tool for recording Room Match, Champions Meeting
+groups/finals and Practice races. Recordings are stored locally and can be
+exported for analysis or independent visualization.
+
+This is an unofficial community project, not affiliated with or endorsed by
+Cygames. Game trademarks and artwork belong to their respective rights holders.
+Third-party software retains its own licenses; see THIRD-PARTY-NOTICES.txt and
+the accompanying notices. The project license does not override those terms.

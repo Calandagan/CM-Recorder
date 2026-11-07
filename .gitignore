@@ -1,0 +1,26 @@
+# Este repositorio público contiene solo documentación y avisos.
+*.exe
+*.dll
+*.pyd
+*.zip
+*.py
+*.pyc
+*.pdb
+*.ps1
+*.key
+*.pem
+*.db
+*.mdb
+*.sqlite*
+*.jsonl
+*.json.gz
+.env*
+.venv/
+__pycache__/
+runtime/
+build/
+dist/
+sessions/
+raw/
+control.json
+.privacy-salt
